@@ -39,4 +39,4 @@ jobs:
       - name: code coverage
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: mvn -Dsonar.coverage.jacoco.xmlReportPaths=../app-it/target/site/jacoco-aggregate/jacoco.xml  sonar:sonar -Pcoverage
+        run: mvn -Dsonar.coverage.jacoco.xmlReportPaths=../simple-java-maven-app/target/site/jacoco-aggregate/jacoco.xml  sonar:sonar -Pcoverage
