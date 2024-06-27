@@ -22,7 +22,6 @@
     <sonar.host.url>https://sonarcloud.io</sonar.host.url>
     <sonar.login>${env.SONAR_TOKEN}</sonar.login>
   </properties>
-  <profile>
   <id>coverage</id>
   <build>
     <pluginManagement>
@@ -98,6 +97,5 @@
   </plugin>
     </plugins>
   </build>
-</profile>
 </project>
 
