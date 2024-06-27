@@ -37,6 +37,7 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: mvn -B -X verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=ajay-chavan5_simple-java-maven-app
       - name: code coverage
+        if: ${{ github.actor != 'dependabot[bot]' }}
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: mvn -Dsonar.coverage.jacoco.xmlReportPaths=../simple-java-maven-app/target/site/jacoco-aggregate/jacoco.xml  sonar:sonar -Pcoverage
